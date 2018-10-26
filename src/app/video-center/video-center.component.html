@@ -18,7 +18,11 @@
         <button class="btn btn-success" type="submit">Save</button>
       </form>
     </div>
-    <app-video-detail (updateVideoEvent)="onUpdateVideoEvent($event)" *ngIf="selectedVideo && _hideNewVideo" [video]="selectedVideo"></app-video-detail>
+    <app-video-detail (updateVideoEvent)="onUpdateVideoEvent($event)" 
+                      (deleteVideoEvent)="onDeleteVideoEvent($event)" 
+                      *ngIf="selectedVideo && _hideNewVideo" 
+                      [video]="selectedVideo">
+    </app-video-detail>
   </div>
   <div class="col-sm-3">
     <button (click)="toggleNewVideoForm()" class="btn btn-success btn-block mb-2" type="button">+ New video</button>
