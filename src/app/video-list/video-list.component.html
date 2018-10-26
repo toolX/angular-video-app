@@ -1,5 +1,5 @@
-<ul class="nav flex-column nav-pills nav-stacked">
+<ul class="nav flex-column nav-pills">
   <li class="nav-item" *ngFor="let video of videos">
-    <a class="nav-link">{{video.title}}</a>
+    <a (click)="onSelect(video)" class="nav-link">{{video.title}}</a>
   </li>
 </ul>
