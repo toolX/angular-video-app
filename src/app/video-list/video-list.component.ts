@@ -12,12 +12,15 @@ export class VideoListComponent implements OnInit {
 
   public SelectVideo = new EventEmitter();
 
+  selectedVideo: Video;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   onSelect(video: Video) {
+    this.selectedVideo = video;
     this.SelectVideo.emit(video);
   }
 
